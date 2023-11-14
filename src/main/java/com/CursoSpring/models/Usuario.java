@@ -2,6 +2,8 @@ package com.CursoSpring.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
@@ -16,6 +18,7 @@ public class Usuario {
 
     // Getter y Setter con lombok e indicar la clave primaria con "@id"
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "id")
     private Long id;
 
